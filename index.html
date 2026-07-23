@@ -4,45 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vistro App - Legal & Policies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 600px;
-            margin: 100px auto;
-            padding: 20px;
-            text-align: center;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f 0%, #2a2a40 50%, #1e1e2f 100%);
+            background-attachment: fixed;
+            color: #f1f1f1;
+            overflow-x: hidden;
+            min-height: 100vh;
         }
-        h1 {
-            color: #2c3e50;
+        /* Background Mesh Orbs */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.6;
         }
-        a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+        .orb-1 { width: 400px; height: 400px; background: #6366f1; top: -100px; left: -100px; }
+        .orb-2 { width: 500px; height: 500px; background: #ec4899; bottom: -150px; right: -100px; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            border-radius: 24px;
         }
-        a:hover {
-            background-color: #2980b9;
+        
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
-<body>
-    <h1>Vistro App</h1>
-    <p>Legal Information and Policies</p>
+<body class="antialiased flex items-center justify-center">
     
-    <div>
-        <a href="./privacy.html">Privacy Policy</a>
-        <a href="./terms.html">Terms of Service</a>
-    </div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
 
-    <p style="margin-top: 50px; font-size: 0.9em; color: #7f8c8d;">
-        Contact Support: <a href="mailto:support@vistro.app" style="background: none; color: #3498db; padding: 0; margin: 0; display: inline;">support@vistro.app</a>
-    </p>
+    <main class="container mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen z-10">
+        <div class="glass-card max-w-2xl w-full p-10 md:p-16 text-center will-change-transform opacity-0" id="main-card">
+            
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-pink-500 mb-8 shadow-2xl animate-item opacity-0 transform translate-y-8">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+            </div>
+
+            <h1 class="text-5xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 animate-item opacity-0 transform translate-y-8">Vistro App</h1>
+            <p class="text-lg text-gray-300 mb-12 animate-item opacity-0 transform translate-y-8">Legal Information and Policies</p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center animate-item opacity-0 transform translate-y-8">
+                <a href="./privacy.html" class="btn-glass text-white font-semibold py-4 px-8 rounded-xl flex-1 max-w-[200px] text-center mx-auto sm:mx-0">
+                    Privacy Policy
+                </a>
+                <a href="./terms.html" class="btn-glass text-white font-semibold py-4 px-8 rounded-xl flex-1 max-w-[200px] text-center mx-auto sm:mx-0">
+                    Terms of Service
+                </a>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-gray-700/50 animate-item opacity-0 transform translate-y-8">
+                <p class="text-sm text-gray-400">
+                    Questions? Contact us at 
+                    <a href="mailto:support@vistro.app" class="text-indigo-400 hover:text-indigo-300 transition-colors">support@vistro.app</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.to("#main-card", {
+                duration: 1.2,
+                y: 0,
+                opacity: 1,
+                ease: "power4.out"
+            });
+            
+            gsap.to(".animate-item", {
+                duration: 1,
+                y: 0,
+                opacity: 1,
+                stagger: 0.15,
+                ease: "power3.out",
+                delay: 0.3
+            });
+        });
+    </script>
 </body>
 </html>

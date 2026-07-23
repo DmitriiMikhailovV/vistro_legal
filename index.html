@@ -10,9 +10,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
         body {
             font-family: 'Inter', -apple-system, sans-serif;
-            background: linear-gradient(135deg, #1c1815 0%, #171411 50%, #12100d 100%);
+            background: linear-gradient(135deg, #fef9f5 0%, #faf5f0 50%, #f8f2ed 100%);
             background-attachment: fixed;
-            color: #f1f1f1;
+            color: #333333;
             overflow-x: hidden;
             min-height: 100vh;
         }
@@ -22,28 +22,29 @@
             border-radius: 50%;
             filter: blur(80px);
             z-index: -1;
-            opacity: 0.6;
+            opacity: 0.3;
         }
-        .orb-1 { width: 400px; height: 400px; background: #ffb8a1; top: -100px; left: -100px; }
-        .orb-2 { width: 500px; height: 500px; background: #ff7f50; bottom: -150px; right: -100px; }
+        .orb-1 { width: 400px; height: 400px; background: #ff9e7a; top: -100px; left: -100px; }
+        .orb-2 { width: 500px; height: 500px; background: #ff632e; bottom: -150px; right: -100px; }
         
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,1);
             border-radius: 24px;
         }
         
         .btn-glass {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
             transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            color: #333333;
         }
         .btn-glass:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(0, 0, 0, 0.08);
             transform: translateY(-4px) scale(1.02);
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -58,26 +59,30 @@
     <main class="container mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen z-10">
         <div class="glass-card max-w-2xl w-full p-10 md:p-16 text-center will-change-transform opacity-0" id="main-card">
             
-            <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-pink-500 mb-8 shadow-2xl animate-item opacity-0 transform translate-y-8">
-                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+            <div class="w-20 h-20 mb-8 mx-auto animate-item opacity-0 transform translate-y-8">
+                <img src="icon.png" alt="Vistro Icon" class="w-full h-full object-contain rounded-2xl shadow-lg">
             </div>
 
-            <h1 class="text-5xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 animate-item opacity-0 transform translate-y-8">Vistro App</h1>
-            <p class="text-lg text-gray-300 mb-12 animate-item opacity-0 transform translate-y-8">Legal Information and Policies</p>
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-gray-900 animate-item opacity-0 transform translate-y-8">
+                Vistro
+            </h1>
+            <p class="text-xl text-gray-600 mb-12 max-w-xl mx-auto font-light animate-item opacity-0 transform translate-y-8">
+                Legal and Policy Documentation
+            </p>
             
             <div class="flex flex-col sm:flex-row gap-6 justify-center animate-item opacity-0 transform translate-y-8">
-                <a href="./privacy.html" class="btn-glass text-white font-semibold py-4 px-8 rounded-xl flex-1 max-w-[200px] text-center mx-auto sm:mx-0">
+                <a href="./privacy.html" class="btn-glass font-semibold py-4 px-8 rounded-xl flex-1 max-w-[200px] text-center mx-auto sm:mx-0">
                     Privacy Policy
                 </a>
-                <a href="./terms.html" class="btn-glass text-white font-semibold py-4 px-8 rounded-xl flex-1 max-w-[200px] text-center mx-auto sm:mx-0">
+                <a href="./terms.html" class="btn-glass font-semibold py-4 px-8 rounded-xl flex-1 max-w-[200px] text-center mx-auto sm:mx-0">
                     Terms of Service
                 </a>
             </div>
 
-            <div class="mt-16 pt-8 border-t border-gray-700/50 animate-item opacity-0 transform translate-y-8">
-                <p class="text-sm text-gray-400">
+            <div class="mt-16 pt-8 border-t border-gray-300 animate-item opacity-0 transform translate-y-8">
+                <p class="text-sm text-gray-500">
                     Questions or need help? 
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScnin8W1DXBGTnwMUXqss45zqT_AWLb-AKzp4FHph5dOnJEew/viewform" target="_blank" rel="noopener noreferrer" style="color: #ffb8a1;" class="hover:opacity-80 transition-opacity">Contact Support</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScnin8W1DXBGTnwMUXqss45zqT_AWLb-AKzp4FHph5dOnJEew/viewform" target="_blank" rel="noopener noreferrer" style="color: #ff632e;" class="hover:opacity-80 transition-opacity font-semibold">Contact Support</a>
                 </p>
             </div>
         </div>

@@ -10,9 +10,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
         body {
             font-family: 'Inter', -apple-system, sans-serif;
-            background: linear-gradient(135deg, #1c1815 0%, #171411 50%, #12100d 100%);
+            background: linear-gradient(135deg, #fef9f5 0%, #faf5f0 50%, #f8f2ed 100%);
             background-attachment: fixed;
-            color: #f1f1f1;
+            color: #333333;
             overflow-x: hidden;
             min-height: 100vh;
         }
@@ -21,38 +21,38 @@
             border-radius: 50%;
             filter: blur(80px);
             z-index: -1;
-            opacity: 0.5;
+            opacity: 0.3;
         }
-        .orb-1 { width: 400px; height: 400px; background: #ffb8a1; top: -100px; left: -100px; }
-        .orb-2 { width: 500px; height: 500px; background: #ff7f50; bottom: -150px; right: -100px; }
+        .orb-1 { width: 400px; height: 400px; background: #ff9e7a; top: -100px; left: -100px; }
+        .orb-2 { width: 500px; height: 500px; background: #ff632e; bottom: -150px; right: -100px; }
         
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,1);
             border-radius: 24px;
         }
         
-        .glass-content h1 { color: #fff; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; }
-        .glass-content h2 { color: #cbd5e1; font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;}
-        .glass-content p { color: #94a3b8; margin-bottom: 1rem; line-height: 1.7; }
-        .glass-content ul { color: #94a3b8; list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; }
+        .glass-content h1 { color: #111827; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .glass-content h2 { color: #374151; font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 0.5rem;}
+        .glass-content p { color: #4b5563; margin-bottom: 1rem; line-height: 1.7; }
+        .glass-content ul { color: #4b5563; list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; }
         .glass-content li { margin-bottom: 0.5rem; }
-        .glass-content strong { color: #f8fafc; font-weight: 600; }
-        .glass-content a { color: #ffb8a1; text-decoration: none; transition: color 0.3s ease; }
-        .glass-content a:hover { color: #ff7f50; text-decoration: underline; }
+        .glass-content strong { color: #1f2937; font-weight: 600; }
+        .glass-content a { color: #ff9e7a; text-decoration: none; transition: color 0.3s ease; }
+        .glass-content a:hover { color: #ff632e; text-decoration: underline; }
 
         .btn-back {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: #94a3b8;
+            color: #6b7280;
             transition: all 0.3s ease;
         }
         .btn-back:hover {
-            color: #fff;
+            color: #111827;
             transform: translateX(-4px);
         }
     </style>
